@@ -11,7 +11,7 @@ var connection = mysql.createConnection({
 	user: 'root',
 
 	// Your password
-	password: '',
+	password: 'root',
 	database: 'Bamazon'
 });
 
@@ -42,7 +42,7 @@ function promptUserPurchase() {
 		},
 		{
 			type: 'input',
-			name: 'quantity',
+			name: 'stockQuantity',
 			message: 'How many items would you like to purchase?',
 			validate: validateInput,
 			filter: Number
@@ -77,7 +77,7 @@ function promptUserPurchase() {
 					console.log('Congratulations, the product you requested is in stock! Placing order!');
 
 					// Construct the updating query string
-					var updateQueryStr = 'UPDATE products SET stock_quantity = ' + (productData.stockQuantity - quantity) + ' WHERE itemID = ' + item;
+					var updateQueryStr = 'UPDATE products SET stockQuantity = ' + (productData.stockQuantity - quantity) + ' WHERE itemID = ' + item;
 					// console.log('updateQueryStr = ' + updateQueryStr);
 
 					// Update the inventory
