@@ -1,0 +1,28 @@
+{
+  "name": "bamazonstore",
+  "version": "1.0.0",
+  "description": "A bamazon online store",
+  "main": "methods.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TanyaOdegova/bamazon.git"
+  },
+  "keywords": [
+    "any",
+    "keyword"
+  ],
+  "author": "TanyaO",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TanyaOdegova/bamazon/issues"
+  },
+  "homepage": "https://github.com/TanyaOdegova/bamazon#readme",
+  "dependencies": {
+    "config": "^3.1.0",
+    "mysql": "github:felixge/node-mysql",
+    "prompt": "^1.0.0"
+  }
+}
