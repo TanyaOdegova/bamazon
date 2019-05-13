@@ -74,7 +74,7 @@ function promptUserPurchase() {
 
 				// If the quantity requested by the user is in stock
 				if (quantity <= productData.stockQuantity) {
-					console.log('Congratulations, the product you requested is in stock! Placing order!');
+					console.log('Congratulations, your order is placed.');
 
 					// Construct the updating query string
 					var updateQueryStr = 'UPDATE products SET stockQuantity = ' + (productData.stockQuantity - quantity) + ' WHERE itemID = ' + item;
@@ -84,7 +84,7 @@ function promptUserPurchase() {
 					connection.query(updateQueryStr, function(err, data) {
 						if (err) throw err;
 
-						console.log('Your oder has been placed! Your total is $' + productData.price * quantity);
+						console.log('Your order has been placed! Your total is $' + (productData.price * quantity));
 						console.log('Thank you for shopping with us!');
 						console.log("\n---------------------------------------------------------------------\n");
 
@@ -123,7 +123,7 @@ function displayInventory() {
 			strOut += 'Item ID: ' + data[i].itemID + '  //  ';
 			strOut += 'Product Name: ' + data[i].productName + '  //  ';
 			strOut += 'Department: ' + data[i].departmentName + '  //  ';
-			strOut += 'Price: ' + data[i].price + '\n';
+			strOut += 'Price: $' + data[i].price + ' // ';
 
 			console.log(strOut);
 		}
