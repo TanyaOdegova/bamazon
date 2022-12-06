@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/TanyaOdegova/bamazon#readme",
   "dependencies": {
-    "body-parser": "^1.19.0",
+    "body-parser": "^1.20.1",
     "config": "^3.1.0",
     "inquirer": "^6.3.1",
     "mysql": "github:felixge/node-mysql",
